@@ -22,4 +22,8 @@ class Boat < ActiveRecord::Base
   def self.without_a_captain
     Boat.where(captain: nil)
   end
+
+  def self.sailboats
+    Boat.all
+  end
 end
