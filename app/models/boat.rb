@@ -24,6 +24,6 @@ class Boat < ActiveRecord::Base
   end
 
   def self.sailboats
-    Boat.where(classification: 'sailboat')
+    includes(:classification).where(classification: {name:'sailboat'})
   end
 end
